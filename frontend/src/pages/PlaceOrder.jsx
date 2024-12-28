@@ -78,6 +78,9 @@ const PlaceOrder = () => {
             navigate('/orders')
           } else {
             toast.error(response.data.message)
+            if(response.data.message == 'Not Authorized Login Again') {
+              navigate('/login')
+            }
           }
           break;
 
